@@ -31,6 +31,9 @@ const Header = ({ titlePre = '' }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
+      <h1>
+        <a href="/">{getBlogTitle()}</a>
+      </h1>
       <ul>
         {navItems.map(({ label, page, link }) => (
           <li key={label}>

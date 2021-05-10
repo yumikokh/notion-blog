@@ -21,6 +21,11 @@
   font-weight: 400;
 }
 
+.header :global(h1) :global(a) {
+  color: inherit;
+  font-weight: inherit;
+}
+
 .header :global(a.active) {
   color: #0070f3;
   font-weight: 600;
@@ -28,6 +33,6 @@
 
 @media (max-width: 600px) {
   .header {
-    padding: .5em 0 2em;
+    padding: 0.5em 0 2em;
   }
 }
