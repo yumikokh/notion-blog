@@ -290,7 +290,8 @@ const RenderPost = ({ post, redirect, preview }) => {
               break
             case 'image':
             case 'video':
-            case 'embed': {
+            case 'embed':
+            case 'codepen': {
               const { format = {} } = value
               const {
                 block_width,
