@@ -1,3 +1,7 @@
+export const getBlogTitle = (titlePre: string = '') => {
+  return `${titlePre ? `${titlePre} | ` : ''}kokhlog.`
+}
+
 export const getBlogLink = (slug: string) => {
   return `/${slug}`
 }
