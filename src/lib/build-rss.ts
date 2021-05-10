@@ -5,7 +5,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import { textBlock } from './notion/renderers'
 import getBlogIndex from './notion/getBlogIndex'
 import getNotionUsers from './notion/getNotionUsers'
-import { postIsPublished, getBlogLink } from './blog-helpers'
+import { postIsPublished, getBlogLink, getBlogTitle } from './blog-helpers'
 import { loadEnvConfig } from '@next/env'
 import serverConstants from './notion/server-constants'
 
@@ -68,7 +68,7 @@ function createRSS(blogPosts = []) {
     <link href="/atom" rel="self" type="application/rss+xml"/>
     <link href="/" />
     <updated>${NOW}</updated>
-    <id>My Notion Blog</id>${postsString}
+    <id>${getBlogTitle()}</id>${postsString}
   </feed>`
 }
 
