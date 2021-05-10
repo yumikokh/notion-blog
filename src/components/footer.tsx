@@ -19,7 +19,11 @@ export default function Footer() {
             view source
           </ExtLink>
         </span> */}
-        <small>Copyright &copy; 2021 Yumiko Kokubu, All Rights Reserved.</small>
+        <small>
+          Copyright &copy; 2021{' '}
+          <a href="https://twitter.com/yumikokh">@yumikokh</a>, All Rights
+          Reserved.
+        </small>
       </footer>
     </>
   )
