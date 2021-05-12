@@ -95,6 +95,12 @@
   display: block;
 }
 
+.post :global(img) {
+  max-width: 100%;
+  width: auto !important;
+  height: auto !important;
+}
+
 .post :global(.tweet) {
   margin: 2rem auto;
   text-align: center;
