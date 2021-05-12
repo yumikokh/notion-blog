@@ -12,9 +12,9 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   // { label: 'Source Code', link: 'https://github.com/ijjk/notion-blog' },
 ]
 
-const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
+const ogImageUrl = 'https://blog.ymkokh.com/og-image.png'
 
-const Header = ({ titlePre = '' }) => {
+const Header = ({ titlePre = '', slug = '' }) => {
   const { pathname } = useRouter()
 
   return (
@@ -25,11 +25,15 @@ const Header = ({ titlePre = '' }) => {
           name="description"
           content="An example Next.js site using Notion for the blog"
         />
-        <meta name="og:title" content={getBlogTitle()} />
+        <meta name="og:title" content={getBlogTitle(titlePre)} />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:site" content="@yumikokh" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
+        <link
+          rel="canonical"
+          href={`https://blog.ymkokh.com${!slug ? '' : '/' + slug}`}
+        ></link>
       </Head>
       <h1>
         <a href="/">{getBlogTitle()}</a>
