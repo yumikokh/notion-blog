@@ -22,14 +22,24 @@ const Header = ({ titlePre = '', slug = '' }) => {
       <Head>
         <title>{getBlogTitle(titlePre)}</title>
         <meta
-          name="description"
-          content="An example Next.js site using Notion for the blog"
+          property="description"
+          content="This is Yumiko's blog which is about frontend, 3D Graphics and life etc."
         />
-        <meta name="og:title" content={getBlogTitle(titlePre)} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={getBlogTitle(titlePre)} />
+        <meta
+          property="og:description"
+          content="This is Yumiko's blog which is about frontend, 3D Graphics and life etc."
+        />
+        <meta
+          property="og:url"
+          content={`https://blog.ymkokh.com${!slug ? '' : '/' + slug}`}
+        />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:site" content="@yumikokh" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
+        <meta name="viewport" content="width=device-width" />
         <link
           rel="canonical"
           href={`https://blog.ymkokh.com${!slug ? '' : '/' + slug}`}
