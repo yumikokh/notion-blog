@@ -26,7 +26,9 @@ export async function getStaticProps({ preview }) {
       }
       return post
     })
-    .sort((f, s) => s?.Date - f?.Date)
+    .sort((f, s) => {
+      return (s?.Date || 0) - (f?.Date || 0)
+    }) // 最新順
     .filter(Boolean)
 
   // console.log(posts, 'posts')
