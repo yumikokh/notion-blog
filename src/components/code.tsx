@@ -1,6 +1,8 @@
 import Prism from 'prismjs'
 import 'prismjs/components/prism-jsx'
 
+console.log('hoge')
+
 const Code = ({ children, language = 'javascript' }) => {
   return (
     <>
